@@ -35,7 +35,7 @@ sudo apt-get install python3-requests
 2. Run the tool:
 
    ```bash
-   python3 sub_checker.py
+   python3 setup.py
    ```
 
 3. Enter the domain you wish to check (e.g., `example.com`).
