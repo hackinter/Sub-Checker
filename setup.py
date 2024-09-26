@@ -50,10 +50,11 @@ class SubChecker:
         else:
             print("🙅‍♂️ No subdomains found.")
 
-    def save_results(self, filename='subdomains.json'):
+    def save_results(self, filename='subdomains.txt'):
         try:
             with open(filename, 'w') as file:
-                json.dump(list(self.subdomains), file)
+                for sub in self.subdomains:
+                    file.write(sub + '\n')  # Each subdomain on a new line
             print(f"✅ Results saved: {filename}")
         except Exception as e:
             print("🚨 Error while saving file:", e)
@@ -68,4 +69,4 @@ if __name__ == "__main__":
         checker = SubChecker(domain)  # Create object
         checker.find_subdomains()
         checker.display_results()
-        checker.save_results()  # Save results to JSON file
+        checker.save_results()  # Save results to text file
