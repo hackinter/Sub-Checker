@@ -1,77 +1,103 @@
-```markdown
-# Sub-Checker
+# Sub-Checker (Subdomain Enumeration Tool)
 
-Sub-Checker is a simple Python tool designed to discover active subdomains of a given domain using the HackerTarget API. This tool is particularly useful for security researchers, ethical hackers, and anyone interested in understanding the subdomain structure of a website.
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=github)](https://github.com/hackinter/Sub-Checker)  
+**Author:** HACKINTER  
+**Created Date:** 2024
 
-## Features
+<p align="center">
+<a href="https://github.com/hackinter"><img title="Github" src="https://img.shields.io/badge/hackinter-grey?style=for-the-badge&logo=github"></a>
+</p>
+<p align="center"> 
+<a href="https://x.com/_anonix_z"><img title="Twitter" src="https://img.shields.io/badge/Twitter-HACKINTER-lightgrey?style=for-the-badge&logo=twitter"></a>
+</p>
 
-- Fetches active subdomains from HackerTarget API.
-- Displays results in a user-friendly ASCII art format.
-- Shows the current version of the tool.
-- Saves the discovered subdomains to a JSON file for later reference.
+---
 
-## Requirements
+## DESCRIPTION:
+**Sub-Checker** is a Python-based subdomain enumeration tool designed to help penetration testers and security researchers identify subdomains for any given domain. This tool automates subdomain discovery by using a variety of search engines and APIs to gather results efficiently.
 
-- Python 3.x
-- `requests` library
+---
 
-## Installation
+## FEATURES:
+- Subdomain enumeration using multiple search engines.
+- Supports subdomain discovery via various APIs for better results.
+- Results can be saved in text or PDF format.
+- User-friendly graphical interface with a clean design.
+- Optimized for both beginners and professionals.
 
-To install the necessary dependencies, run:
+---
+
+## REQUIREMENTS:
+Before using **Sub-Checker**, ensure the following dependencies are installed on your system:
+
+- **Python 3.x**: Check if Python 3.x is installed using `python3 --version`.
+- **Git**: Clone the repository with `git --version`.
+- **Pip**: Install dependencies via pip. It should come with Python 3.x.
+- **APIs**: Some APIs might require free registration for API keys.
+
+---
+
+## INSTALLATION:
+
+### For Linux:
+To install and run **Sub-Checker**, execute the following commands in your terminal:
 
 ```bash
-sudo apt-get install python3-requests
+sudo apt-get update -y
+sudo apt-get install python3 git -y
+sudo apt-get install python3-pip -y
+git clone https://github.com/hackinter/Sub-Checker.git
+cd Sub-Checker
+pip install -r requirements.txt
 ```
 
-## Usage
+### For Termux:
+For Termux users, you can follow these steps:
 
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/hackinter/Sub-Checker.git
-   cd Sub-Checker
-   ```
-
-2. Run the tool:
-
-   ```bash
-   python3 setup.py
-   ```
-
-3. Enter the domain you wish to check (e.g., `example.com`).
-
-## Example
-
-```
-👋 Welcome to Sub-Checker!
-🔗 Enter your domain (e.g., example.com): example.com
+```bash
+pkg update -y
+pkg upgrade -y
+pkg install python git -y
+pip install -r requirements.txt
+git clone https://github.com/hackinter/Sub-Checker.git
+cd Sub-Checker
 ```
 
-The tool will display the active subdomains along with the current version of the tool.
+---
 
-## Saving Results
+## USAGE:
+To use **Sub-Checker**, run the following command:
 
-The results will be saved to a JSON file named `subdomains.json` in the same directory.
-
-## Versioning
-
-The current version of Sub-Checker is `2.1.0`.
-
-## Contributing
-
-If you would like to contribute to Sub-Checker, please fork the repository and submit a pull request. Any contributions are welcome!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-- **HACKINTER**
-
-## Acknowledgments
-
-- [HackerTarget](https://hackertarget.com/) for providing the API used in this tool.
+```bash
+python3 sub_checker.py
 ```
 
-Feel free to modify any sections as needed. If you need further adjustments or additions, just let me know!
+You will be prompted to enter a domain name (e.g., `example.com`). The tool will enumerate subdomains and display the results.
+
+### Options:
+- **Save Results**: After subdomain enumeration, the tool allows you to save results in text or PDF format.
+- **Multiple Search Engines**: Subdomains are discovered through a variety of search engines, ensuring comprehensive results.
+
+---
+
+## ONE-CLICK INSTALLATION:
+
+For quick installation, use this one-liner command for **Linux**:
+
+```bash
+sudo apt-get update -y && sudo apt-get install python3 git -y && sudo apt-get install python3-pip -y && git clone https://github.com/hackinter/Sub-Checker.git && cd Sub-Checker && pip install -r requirements.txt
+```
+
+---
+
+## CONTRIBUTIONS:
+We welcome contributions! Feel free to fork this repository, submit issues, or send pull requests to improve **Sub-Checker**.
+
+---
+
+## CREDITS:
+Special thanks to all contributors and open-source tools that helped build this project. Contributions from the security community are always appreciated.
+
+---
+
+### © 2024 HACKINTER. All rights reserved.
